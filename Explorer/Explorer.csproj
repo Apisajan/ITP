@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0C7A1F88-8B92-4CD0-AD2F-12CBDAC2B522}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Explorer</RootNamespace>
+    <AssemblyName>Explorer</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>E:\Repo\DVD\Published\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>A4EDA309DFF479DB8F6FA2F711C5A02738E85162</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Explorer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=6.9.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExceptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExceptionForm.Designer.cs">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExplorerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExplorerForm.Designer.cs">
+      <DependentUpon>ExplorerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStartup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStartup.Designer.cs">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MessageQueue\PanMessageQueue.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MessageQueue\PanMessageQueue.Designer.cs">
+      <DependentUpon>PanMessageQueue.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PanAboutBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PanAboutBox.Designer.cs">
+      <DependentUpon>PanAboutBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WebBrowser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WebBrowser.Designer.cs">
+      <DependentUpon>WebBrowser.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExceptionForm.resx">
+      <DependentUpon>ExceptionForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExplorerForm.resx">
+      <DependentUpon>ExplorerForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStartup.resx">
+      <DependentUpon>frmStartup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MessageQueue\PanMessageQueue.resx">
+      <DependentUpon>PanMessageQueue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PanAboutBox.resx">
+      <DependentUpon>PanAboutBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="WebBrowser.resx">
+      <DependentUpon>WebBrowser.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DistributionManagement\DistributionManagement.csproj">
+      <Project>{f4a36b10-84a9-4376-a8bf-be3e33e6458a}</Project>
+      <Name>DistributionManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinanceManagement\FinanceManagement.csproj">
+      <Project>{65345113-f14f-4ec4-a13a-a188faa1ac9d}</Project>
+      <Name>FinanceManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FinishedGoodManagement\FinishedGoodManagement.csproj">
+      <Project>{ed321857-409a-4bbf-8b93-caa919bca529}</Project>
+      <Name>FinishedGoodManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FrameworkControls\FrameworkControls.csproj">
+      <Project>{7079dc71-6b90-47a7-bb0f-b061f6861d37}</Project>
+      <Name>FrameworkControls</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HRManagement\HRManagement.csproj">
+      <Project>{66d7fad9-397f-4ec6-ad2a-02bab75fd284}</Project>
+      <Name>HRManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MySQLDatabaseAccess\MySQLDatabaseAccess.csproj">
+      <Project>{7a1f3ab0-c5e3-4234-a9d5-d15ef65714b0}</Project>
+      <Name>MySQLDatabaseAccess</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProductProcessManagement\ProductProcessManagement.csproj">
+      <Project>{d1eab747-dfbf-4d2f-b36a-25dd5f71f12b}</Project>
+      <Name>ProductProcessManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RawMaterialManagement\RawMaterialManagement.csproj">
+      <Project>{075cc06a-38b4-4f27-84ba-29078bb5c4a8}</Project>
+      <Name>RawMaterialManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SalesManagement\SalesManagement.csproj">
+      <Project>{b6166827-aa20-471c-81c5-912f75040d62}</Project>
+      <Name>SalesManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UserManagement\UserManagement.csproj">
+      <Project>{8e0584e3-38c9-4c48-8eb2-dc3168c1f680}</Project>
+      <Name>UserManagement</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ApplicationSettings\" />
+    <Folder Include="Utility\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\teamah logo transparent small.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_settings_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_24dp2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_black_24dp3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\member1.png" />
+    <None Include="Resources\20150831_55e46b18e2a80.png" />
+    <None Include="Resources\black-linux-logo-manjaro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_info_black_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_48dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_48dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_menu_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_info_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_power_settings_new_white_24dp.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ic_power_settings_new_white_24dp1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EXPLORER.PNG" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
